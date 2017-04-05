@@ -1,0 +1,13 @@
+#!/bin/bash
+#usage: pp9a_cx source_code
+#compiles and executes "source_code.c"
+
+#NOTE: parameter "source_code" must not hve file extension,".c"
+
+rm -f $1 $1.o
+gcc $1.c -wall -o $1
+if[$? = 0]; then
+	./$1
+else
+	echo COMPILATION ERROR
+fi
