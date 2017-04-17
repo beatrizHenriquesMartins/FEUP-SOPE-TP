@@ -7,11 +7,13 @@
 
 #define MAX_PASSWD_LEN 20
 
-int main(void)
-{
- struct termios term, oldterm;
+int main(void){
+ struct termios term;
+ struct termios oldterm;
  int i;
- char pass[MAX_PASSWD_LEN+1], ch, echo = '*';
+ char pass[MAX_PASSWD_LEN+1];
+ char ch;
+ char echo = '*';
 
  write(STDOUT_FILENO, "\nPassword? ", 11);
 
@@ -34,4 +36,3 @@ int main(void)
 
  return 0;
 }
-
